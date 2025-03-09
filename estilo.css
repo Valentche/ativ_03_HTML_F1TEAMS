@@ -1,0 +1,66 @@
+@font-face { /*o @font-family, utilizei ele para importar uma fonte personalizada de forma offline para a pagina*/
+    font-family: f1; /*o nome da font-family que vou itulizar no body*/
+    src: url(fonts/Formula1-Bold.otf) format('opentype'); /*aq eu seleciono o caminho, e no format eu escrevo entre '' o opentype para arquivo .otf ou truetype para .ttf*/
+}
+
+body {
+    font-family: f1;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.time {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px; /*Espacamento da borda*/
+    border-radius: 10px; /*Deixa arredondado as bordas*/
+    box-shadow: 0 0 10px rgba(0, 0, 0,  0.1); /*Da a sombrinha no quadrado*/
+    flex: 1 1 calc(33.333% - 40px); /*define o tamanho das caixas de equipe, ESSA EU TIVE QUE DAR UMA PESQUISADA BRABA KKKK*/
+    max-width: 1 1 calc(33.333% - 40px); /*aq ele vai deixar uma equipe ao lado da outra em duas colunas, ja que ele mede a largura, OBS: SEM O 1 1 NO COMEÇO ELE DEIXA 2 MAS SOBRA ESPAÇO NA TELA*/
+    display: flex; /*Deixou a imagem centraliazada entre os textos, como se fosse uma caixa, o flex deixava tudo lado a lado, bugando as palavras*/
+    flex-direction: column;
+    align-items: center; /*alinahmento né*/
+    text-align: center;
+}
+
+.piloto{ /*aq é pra ediatr os nomes dos pilotos com as definidas bandeiras*/
+    display: flex; /*modo de exibição, para deixar de ladinho ui*/
+    align-items: center; /*para alinhas tudo*/
+    gap: 10px; /*espaço entre a imagem e o nome*/
+}
+
+.piloto img{/*aq vamos definir o tamanho da imagem que vamos deixar*/
+    width: 24px; /*tamanho da banderola*/
+    height: auto;
+    border-radius: 3px;
+}
+
+.cabecalho{
+    background-color: #f00000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.conteudo{
+    padding: 20px;
+    display: flex; /*aq ele vai deixar as aequipes lado a lado, ao inves de uma lista*/
+    flex-wrap: wrap; /*quebra as caixas para a proxima linha*/
+    gap: 20px; /*só o espaço entre as caixas*/
+}
+
+
+.time h2 {
+    margin-top: 0;
+    margin-right: 50px;
+}
+
+.time img {
+    max-width: 350px; /*tamanho maximo da imagem*/
+    height: auto;
+    border-radius: 5px;
+}
